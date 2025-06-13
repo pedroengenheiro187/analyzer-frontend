@@ -124,11 +124,11 @@
       document.getElementById('result').innerText = 'Analisando imagens, aguarde...';
 
       try {
-        const res = await fetch('https://analyzer3-0.onrender.com', {
+        const res = await fetch('https://analyzer3-0.onrender.com/analyze', {
           method: 'POST',
           body: formData
         });
-        const data = await response.json();
+        const data = await res.json();
         document.getElementById('result').innerText = JSON.stringify(data, null, 2);
       } catch (error) {
         document.getElementById('result').innerText = 'Erro ao analisar imagens: ' + error;
