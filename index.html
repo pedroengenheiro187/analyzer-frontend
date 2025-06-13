@@ -124,7 +124,7 @@
       document.getElementById('result').innerText = 'Analisando imagens, aguarde...';
 
       try {
-        const response = await fetch('https://analyzer3-0.onrender.com/analyze', {
+        const response = await fetch('https://analyzer3-0.onrender.com', {
           method: 'POST',
           body: formData
         });
